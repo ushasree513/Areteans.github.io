@@ -1,14 +1,30 @@
-<script src='
-https://areteanstechnologyltd01.pegalabs.io/prweb/PRRestService/c11nsvc/v1/pega-embed.js'
-></script>
-<pega-embed id='theEmbed' action='createCase' caseTypeID=ID casePage='full' appAlias='CPG-Umbrella' pegaServerUrl='
-https://areteanstechnologyltd01.pegalabs.io/prweb/'
-autoReauth='true' authService='pega' deferLoad='true' userIdentifier='CPGAdmin' password='cnVsZXM='
-clientId='92670128620076876105' style='width:100%'>
-</pega-embed>
-<script>
-let el = document.getElementById("theEmbed");
-const url = new URL(window.location.toLocaleString());
-const searchParams = url.searchParams;
-const ID = searchParams.get('ID');
-</script>
+<html>
+    <head>
+        <title>Pega Academy</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	</head>
+	<body>
+    <script src='
+    https://areteanstechnologyltd01.pegalabs.io/prweb/PRRestService/c11nsvc/v1/pega-embed.js'
+    ></script>
+    <pega-embed id='theEmbed' action='createCase' caseTypeID='' casePage='full' appAlias='CPG-Umbrella' pegaServerUrl='
+    https://areteanstechnologyltd01.pegalabs.io/prweb/'
+    autoReauth='true' authService='pega' deferLoad='true' userIdentifier='CPGAdmin' password='cnVsZXM='
+    clientId='92670128620076876105' style='width:100%'>
+    </pega-embed>
+    <script>
+    let el = document.getElementById("theEmbed");
+    const url = new URL(window.location.toLocaleString());
+    //console.log(url);
+    const SParams = url.searchParams;
+    //console.log(SParams);
+    const ID = SParams.get('ID');
+    //console.log(ID);
+    el.setAttribute("caseTypeID", ID);
+    el.load(); 
+    
+    </script>
+
+</body>
+</html>
