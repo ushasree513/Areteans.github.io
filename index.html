@@ -1,29 +1,28 @@
 <html>
-    <head>
-        <title>Pega Academy</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	</head>
-	<body>
+<head>
+    <title>Pega Academy</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+</head>
+<body>
     <script src='
-    https://areteanstechnologyltd01.pegalabs.io/prweb/PRRestService/c11nsvc/v1/pega-embed.js'
-    ></script>
-    <pega-embed id='theEmbed' action='createCase' caseTypeID='' casePage='full' appAlias='CPG-Umbrella' pegaServerUrl='https://areteanstechnologyltd01.pegalabs.io/prweb/'
-    autoReauth='true' authService='pega' deferLoad='true' userIdentifier='CPGAdmin' password='cnVsZXM='
-    clientId='92670128620076876105' style='width:100%'>
+https://areteanstechnologyltd01.pegalabs.io/prweb/PRRestService/c11nsvc/v1/pega-embed.js'></script>
+    <pega-embed id='theEmbed' action='createCase' caseTypeID='' casePage='full' appAlias='CPG-Umbrella'
+        pegaServerUrl='https://areteanstechnologyltd01.pegalabs.io/prweb/' autoReauth='true' authService='pega'
+        deferLoad='true' userIdentifier='CPGAdmin' password='cnVsZXM=' clientId='92670128620076876105'
+        style='width:100%'
+        theme='{"base": {"palette": {"brand-primary": "#30826a","app-background":"#e6e6e6","interactive": "#30826a"}},"components": {"app-shell": {"nav":{"background-color": "#30826a"}},"avatar": {"background-color": "#04533b"},"button": {"border-radius": 0.5},"card": {"background": "#ffffff"}}}'>
     </pega-embed>
     <script>
-    let el = document.getElementById("theEmbed");
-    const url = new URL(window.location.toLocaleString());
-    //console.log(url);
-    const SParams = url.searchParams;
-    //console.log(SParams);
-    const ID = SParams.get('ID');
-    //console.log(ID);
-    el.setAttribute("caseTypeID", ID);
-    el.load(); 
-    
+        let el = document.getElementById("theEmbed");
+        const url = new URL(window.location.toLocaleString());
+        //console.log(url);
+        const SParams = url.searchParams;
+        //console.log(SParams);
+        const ID = SParams.get('ID');
+        //console.log(ID);
+        el.setAttribute("caseTypeID", ID);
+        el.load();
     </script>
-
 </body>
 </html>
